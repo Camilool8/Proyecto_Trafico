@@ -12,7 +12,8 @@ public class Car1 : MonoBehaviour
      {
         KeepGoing = false;
         transform.position = new Vector2(-11, -0.80f);
-        transform.Rotate(0, 0,-90, Space.Self);
+        
+        transform.Rotate(0, 0,0, Space.Self);
         TrafficState = GameObject.Find("S4");
      }
 
@@ -21,7 +22,7 @@ public class Car1 : MonoBehaviour
     {
         if (TrafficState.GetComponent<Semaforo4>().S_2_4_V || KeepGoing)
         {
-            transform.Translate(new Vector2(0, 2f) * speed * Time.deltaTime);
+            transform.Translate(new Vector2(2, 0f) * speed * Time.deltaTime);
         }
     
     }
